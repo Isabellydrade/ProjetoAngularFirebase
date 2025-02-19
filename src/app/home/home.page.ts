@@ -10,8 +10,18 @@ import { Router } from '@angular/router';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
+
 export class HomePage {
 
-  constructor( ){ }
+  page: string = 'Pagina inicial'
+  valor: number = 0;
 
+  increment(){
+    this.valor++;
+  }
+
+  decrementer(){
+    this.valor--;
+    
+  }
 }
