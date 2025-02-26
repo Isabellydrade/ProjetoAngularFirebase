@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 })
 export class HomePage {
 
-  url: string = `https://restcountries.com/v3.1/all?fields=name,flag`;
+  url: string = `https://restcountries.com/v3.1/all?fields=name,flags`;
   is_loading: boolean = false;// para fazer a bolinha de carregamento 
   dados: any = null // esta any pq ela aceita qualquer coisa
 
