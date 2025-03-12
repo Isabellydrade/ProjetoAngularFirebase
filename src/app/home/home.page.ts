@@ -12,22 +12,51 @@ import { Router } from '@angular/router';
 })
 export class HomePage {
 
-  url: string = `https://restcountries.com/v3.1/all?fields=name,flag`;
-  is_loading: boolean = false;// para fazer a bolinha de carregamento 
-  dados: any = null // esta any pq ela aceita qualquer coisa
+  perfil:any = {
+    nome: null,
+    profissao: null,
+    username: null,
+    idioma: null,
+    cidade: null,
+    localidade: null,
+    data_inicio: null,
+    biografia: null,
+    estatiticas: {
+      curtidas:0, 
+      seguidores:0,
+      amigos:0
+    },
+    postagens:[
+      {
+        foto:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9EMS3If484MslaI5ZA4WhbyoVAShTPoz37cFzSIf10EO-KrviBOSXqQEl3clfKP8ljZ8&usqp=CAU",
+        nome: 'Barbie',
+        username: '@barbie',
+        texto: 'texto de exemplo de postagem',
+        data: '12/03/2025'
+      },
+      {
+        foto:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9EMS3If484MslaI5ZA4WhbyoVAShTPoz37cFzSIf10EO-KrviBOSXqQEl3clfKP8ljZ8&usqp=CAU",
+        nome: 'Barbie',
+        username: '@barbie',
+        texto: 'outro exemplo de postagem',
+        data: '13/03/2025'
+      },
+      {
+        foto:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9EMS3If484MslaI5ZA4WhbyoVAShTPoz37cFzSIf10EO-KrviBOSXqQEl3clfKP8ljZ8&usqp=CAU",
+        nome: 'Barbie',
+        username: '@barbie',
+        texto: 'hello word',
+        data: '14/03/2025'
+      },
+      {
+        foto:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9EMS3If484MslaI5ZA4WhbyoVAShTPoz37cFzSIf10EO-KrviBOSXqQEl3clfKP8ljZ8&usqp=CAU",
+        nome: 'Barbie',
+        username: '@barbie',
+        texto: 'outro exemplo de postagem',
+        data: '15/03/2025'
+      },
+    ]
+  };
 
- constructor(){
-  fetch(this.url)// aqui coloca this porque e uma função de fora que esta chamando para ser executada 
-  .then(dados => dados.json())//converter os dados, "=> e como se fosse uma função anonima"
-  .then(dados => {
-    console.log(dados);
-    this.dados = dados; 
-  })//exibir os dados do then de cima 
-  .catch(_ => {
-    console.log(_);  "se colocar _ no lugar do erro exibe so para o dev "
-  })//tratar possiveis erros
-  .finally(() => {
-    console.log('Requisição Finalizada!');
-  })//exibir que finalizou 
- }
+ constructor(){}
 }
