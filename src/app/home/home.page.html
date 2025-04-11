@@ -1,35 +1,107 @@
-<!-- <ion-content [fullscreen]="true">
-    
-    <ion-row>
-        <ion-col size="12" size-lg="6">
-            <ion-item>
-                <ion-input label="Nome do pokemon" placeholder="Nome do pokemon" labelPlacement="floating" [(ngModel)]="this.pokemon.nome"></ion-input>
-            </ion-item>
-            <ion-item>
-                <ion-input label="Poder do pokemon" placeholder="Poder do pokemon" labelPlacement="floating" [(ngModel)]="this.pokemon.poder"></ion-input>
-            </ion-item>
-            <ion-item lines="none" >
-                <ion-button (click)="enviar()" color="secondary" size="medium">Enviar</ion-button>
+<ion-header>
+    <ion-toolbar color="tertiary">
+        <ion-title>Cine Maline</ion-title>
+    </ion-toolbar>
+</ion-header>
 
-            </ion-item>
-        </ion-col>
-    </ion-row>
+<ion-content color="dark" [fullscreen]="true">
 
-</ion-content> -->
+<ion-label class="ion-text-center">
+    <br>
+    <h1>Filmes em cartaz</h1>
+    <br>
+</ion-label>
 
-<ion-content [fullscreen]="true"> 
-     <ion-row>  <!--dentro de uma linha sempre tem uma coluna  -->
-        <ion-col size="6" size-xl="3" *ngFor="let pais of this.dados">
+    <ion-row class="ion-justify-content-center">
+
+        <ion-col size="4">
             <ion-card>
-                <ion-row>
-                    <ion-col size="4">
-                        <img src="">
-                    </ion-col>
-                    <ion-col size="8">
-                        <h2>{{ pais.name.common }}</h2>
-                    </ion-col>
-                </ion-row>
+                <ion-item>
+                    <img src="https://m.media-amazon.com/images/I/91ma+sVqXgL.jpg" alt="">
+                </ion-item>
+                <ion-item>
+                    <ion-label class="ion-text-center">
+                        <h2>Moana 2</h2>
+                    </ion-label>
+                </ion-item>
+                <ion-button color="tertiary">Comprar ingresso</ion-button>
             </ion-card>
+                            
+        </ion-col>
+        
+        
+        <ion-col size="4">
+            <ion-card>
+                <ion-item>
+                    <img class="" src="https://ingresso-a.akamaihd.net/prd/img/movie/um-filme-minecraft/6a574e9c-040b-4612-ae44-785318a27193.webp" alt="">
+                </ion-item>
+                <ion-item>
+                    <ion-label class="ion-text-center">
+                        <h2>Minecraft</h2>
+                    </ion-label>
+                </ion-item>
+                <ion-button color="tertiary">Comprar ingresso</ion-button>
+            </ion-card>
+                            
+        </ion-col>    
+    </ion-row>
+
+    <ion-row class="ion-justify-content-center">
+
+        <ion-col size="4">
+            <ion-card>
+                <ion-item>
+                    <img src="https://ingresso-a.akamaihd.net/prd/img/movie/branca-de-neve/6b185129-45c5-4acf-8cc1-3a232ec97535.webp" alt="">
+                </ion-item>
+                <ion-item>
+                    <ion-label class="ion-text-center">
+                        <h2>Branca de neve</h2>
+                    </ion-label>
+                </ion-item>
+                <ion-button color="tertiary">Comprar ingresso</ion-button>
+            </ion-card>
+                            
+        </ion-col>
+        
+        
+        <ion-col size="4">
+            <ion-card>
+                <ion-item>
+                    <img src="https://images.squarespace-cdn.com/content/v1/540e5d44e4b03111c0805763/2657c1d8-c3d7-4a5e-a6c9-8837c4ef8b79/Flow-Poster-Cinema-Final-Oscar.jpg" alt="">
+                </ion-item>
+                <ion-item>
+                    <ion-label class="ion-text-center">
+                        <h2>Flow</h2>
+                    </ion-label>
+                </ion-item>
+                <ion-button color="tertiary">Comprar ingresso</ion-button>
+            </ion-card>
+                            
+        </ion-col>    
+    </ion-row>
+    <br>
+    <br>
+    <ion-row class="ion-justify-content-center">
+       
+        <ion-col size="12" size-lg="6">
+            <ion-list>
+                <ion-item>
+                    <ion-label>Preços</ion-label>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Inteira 30,00 reais</ion-label>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Meia 15,00 reais</ion-label>
+                </ion-item>
+            </ion-list>
         </ion-col>
     </ion-row>
+
 </ion-content>
+
+<ion-footer>
+<ion-toolbar color="tertiary">
+    <ion-title>isaa</ion-title>
+</ion-toolbar>
+</ion-footer>
